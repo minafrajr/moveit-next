@@ -1,23 +1,30 @@
+import { useState } from "react";
 import styles from "../styles/components/CountDown.module.css";
 
-interface CountDownProps {
-  minute1: string;
-  minute2: string;
-  seconds1: string;
-  seconds2: string;
-}
-export function CountDown(props: CountDownProps) {
+export function CountDown() {
+  const [time, setTime] = useState(25 * 60);
+  const minutes = Math.floor(time / 60);
+  const seconds = time % 60;
+
+  const [minuteLeft, minuteRight] = String(minutes).padStart(2, "0").split("");
+  const [secondLeft, secondRight] = String(seconds).padStart(2, "0").split("");
+
   return (
-    <div className={styles.countDownContainer}>
-      <div>
-        <span>{props.minute1}</span>
-        <span>{props.minute2}</span>
+    <div>
+      <div className={styles.countDownContainer}>
+        <div>
+          <span>{minuteLeft}</span>
+          <span>{minuteRight}</span>
+        </div>
+        <span>:</span>
+        <div>
+          <span>{secondLeft</span>
+          <span>{secondRight}</span>
+        </div>
       </div>
-      <span>:</span>
-      <div>
-        <span>{props.seconds1}</span>
-        <span>{props.seconds2}</span>
-      </div>
+      <button type="button" className={styles.countDownButton}>
+        Iniciar um ciclo
+      </button>
     </div>
   );
 }

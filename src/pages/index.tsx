@@ -2,18 +2,22 @@ import { CompletedChallenges } from "../components/CompletedChallenges";
 import { CountDown } from "../components/CountDown";
 import { ExperienceBar } from "../components/ExperienceBar";
 import { Profile } from "../components/Profile";
+import Head from "next/head";
 
 import styles from "../styles/pages/Home.module.css";
 
 export default function Home() {
   return (
     <div className={styles.container}>
+      <Head>
+        <title>Início | Moveit</title>
+      </Head>
       <ExperienceBar points="100" percent="50" />
       <section>
         <div>
           <Profile profileLevel="15" />
           <CompletedChallenges challenges="12" />
-          <CountDown minute1="2" minute2="5" seconds1="0" seconds2="0" />
+          <CountDown />
         </div>
         <div></div>
       </section>
