@@ -10,7 +10,10 @@ export function Profile(props:ProfileProps) {
       <img src="http://github.com/minafrajr.png" alt="Carlos" />
       <div>
         <strong>Carlos A. Minafra Jr</strong>
-        <p>{props.profileLevel} xp</p>
+        <p>
+          <img src="icons/level.svg" alt="Level"/>
+        Level {props.profileLevel}
+        </p>
       </div>
     </div>
   );
