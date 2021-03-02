@@ -9,7 +9,7 @@ export default function Home() {
       <ExperienceBar points="100" percent="50" />
       <section>
         <div>
-          <Profile />
+          <Profile profileLevel="15" />
         </div>
         <div></div>
       </section>

@@ -1,12 +1,16 @@
 import styles from '../styles/components/Profile.module.css';
 
-export function Profile() {
+interface ProfileProps{
+  profileLevel:string,
+}
+
+export function Profile(props:ProfileProps) {
   return (
-    <div className={styles.profileConteir}>
+    <div className={styles.profileContainer}>
       <img src="http://github.com/minafrajr.png" alt="Carlos" />
       <div>
         <strong>Carlos A. Minafra Jr</strong>
-        <p>Level 1</p>
+        <p>{props.profileLevel} xp</p>
       </div>
     </div>
   );
