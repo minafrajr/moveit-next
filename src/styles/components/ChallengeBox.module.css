@@ -1,0 +1,54 @@
+.challengeBoxContainer {
+  height: 100%;
+  background: var(--white);
+  border-radius: 5%;
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.5);
+  padding: 1.56rem 2rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+.challengeNotActive {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.challengeNotActive strong {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.challengeNotActive p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.4;
+  max-width: 70%;
+  margin-top: 3rem;
+}
+
+.challengeNotActive p img {
+  margin-bottom: 1rem;
+}
+
+.callengeActive {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.4;
+  max-width: 70%;
+  margin-top: 3rem;
+}
+.callengeActive p img {
+  margin-bottom: 1rem;
+}
+.challengeFailedButton {
+  margin-top: 1rem;
+  margin-right: 1rem;
+}
