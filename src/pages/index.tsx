@@ -6,6 +6,7 @@ import Head from "next/head";
 
 import styles from "../styles/pages/Home.module.css";
 import { ChallengeBox } from "../components/ChallengeBox";
+import { CountDownProvider } from "../contexts/CountDownContext";
 
 export default function Home() {
   return (
@@ -13,17 +14,19 @@ export default function Home() {
       <Head>
         <title>Início | Moveit</title>
       </Head>
-      <ExperienceBar points="100" percent="50" />
-      <section>
-        <div>
-          <Profile profileLevel="15" />
-          <CompletedChallenges challenges="12" />
-          <CountDown />
-        </div>
-        <div>
-          <ChallengeBox />
-        </div>
-      </section>
+      <ExperienceBar />
+      <CountDownProvider>
+        <section>
+          <div>
+            <Profile />
+            <CompletedChallenges />
+            <CountDown />
+          </div>
+          <div>
+            <ChallengeBox />
+          </div>
+        </section>
+      </CountDownProvider>
     </div>
   );
 }
