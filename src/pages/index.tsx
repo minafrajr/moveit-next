@@ -1,14 +1,14 @@
-import { GetServerSideProps } from "next";
-import { CompletedChallenges } from "../components/CompletedChallenges";
-import { CountDown } from "../components/CountDown";
-import { ExperienceBar } from "../components/ExperienceBar";
-import { Profile } from "../components/Profile";
-import Head from "next/head";
+import { GetServerSideProps } from 'next';
+import { CompletedChallenges } from '../components/CompletedChallenges';
+import { CountDown } from '../components/CountDown';
+import { ExperienceBar } from '../components/ExperienceBar';
+import { Profile } from '../components/Profile';
+import Head from 'next/head';
 
-import styles from "../styles/pages/Home.module.css";
-import { ChallengeBox } from "../components/ChallengeBox";
-import { CountDownProvider } from "../contexts/CountDownContext";
-import { ChalllengesProvider } from "../contexts/ChallengesContext";
+import styles from '../styles/pages/Home.module.css';
+import { ChallengeBox } from '../components/ChallengeBox';
+import { CountDownProvider } from '../contexts/CountDownContext';
+import { ChalllengesProvider } from '../contexts/ChallengesContext';
 
 interface HomeProps {
   level: number;
